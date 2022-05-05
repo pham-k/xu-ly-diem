@@ -9,7 +9,7 @@ def read_data(fp, lan_thi='1'):
         lan_thi: int, lan thi
 
     Return:
-        df: A dataframe
+        A tuple (dataframe, summary)
     """
     dtype = {
         'Mã HV': 'str',
@@ -38,4 +38,16 @@ def read_data(fp, lan_thi='1'):
         usecols = [*dtype], dtype=dtype
     ).rename(columns=cols)
     df = df.loc[df['user_id'].notna()].fillna('')
-    return df
+    df1 = pd.read_excel(
+        fp, skiprows = 9, 
+    )
+    summary_df = df1.tail(10).iloc[:6,2]
+    summary = {
+        'tong': str(summary_df.iloc[0,])[-3:].strip(),
+        'duthi': str(summary_df.iloc[1,])[-3:].strip(),
+        'vang': str(summary_df.iloc[2,])[-3:].strip(),
+        'dau': str(summary_df.iloc[4,])[-3:].strip(),
+        'rot': str(summary_df.iloc[5,])[-3:].strip(),
+    }
+    
+    return (df, summary)

@@ -1,6 +1,6 @@
 import xlsxwriter
 
-def write_bang_diem_psc_export_INFO1001(df, path, footer='',
+def write_bang_diem_psc_export_INFO1001(df, summary, path, footer='',
                          mon='', lop='', lop_hp='', lan_thi='', ngay_thi='',
                          ngay='      ', thang='03', nam='2022'):
     table_row = df.shape[0]
@@ -139,31 +139,35 @@ def write_bang_diem_psc_export_INFO1001(df, path, footer='',
     
     # TODO: Fix rot
     # Tinh tong, du thi, dau, rot, vang
-    tong_so = table_row
-    vang = df[(df[f'TB{lan_thi}'] == 'VT')].shape[0]
-    du_thi = tong_so - vang
-    try:
-        rot_lt = df[f'NOTE{lan_thi}'].value_counts(dropna=False)['Rớt LT']
-    except:
-        rot_lt = 0
-    try:
-        rot_th = df[f'NOTE{lan_thi}'].value_counts(dropna=False)['Rớt TH']
-    except:
-        rot_th = 0
-    try:
-        rot_lt_th = df[f'NOTE{lan_thi}'].value_counts(dropna=False)['Rớt LT, TH']
-    except:
-        rot_lt_th = 0
-    try:
-        rot_tb = df[f'NOTE{lan_thi}'].value_counts(dropna=False)['Rớt']
-    except:
-        rot_tb = 0
-    try:
-        dau = df[f'NOTE{lan_thi}'].value_counts(dropna=False)['']
-    except:
-        dau = 0
-    # print(df[f'NOTE{lan_thi}'].value_counts(dropna=False))
-    rot = rot_lt + rot_th + rot_lt_th + rot_tb
+    tong_so = summary['tong']
+    du_thi = summary['duthi']
+    dau = summary['dau']
+    rot = summary['rot']
+    vang = summary['vang']
+    # vang = df[(df[f'TB{lan_thi}'] == 'VT')].shape[0]
+    # du_thi = tong_so - vang
+    # try:
+    #     rot_lt = df[f'NOTE{lan_thi}'].value_counts(dropna=False)['Rớt LT']
+    # except:
+    #     rot_lt = 0
+    # try:
+    #     rot_th = df[f'NOTE{lan_thi}'].value_counts(dropna=False)['Rớt TH']
+    # except:
+    #     rot_th = 0
+    # try:
+    #     rot_lt_th = df[f'NOTE{lan_thi}'].value_counts(dropna=False)['Rớt LT, TH']
+    # except:
+    #     rot_lt_th = 0
+    # try:
+    #     rot_tb = df[f'NOTE{lan_thi}'].value_counts(dropna=False)['Rớt']
+    # except:
+    #     rot_tb = 0
+    # try:
+    #     dau = df[f'NOTE{lan_thi}'].value_counts(dropna=False)['']
+    # except:
+    #     dau = 0
+    # # print(df[f'NOTE{lan_thi}'].value_counts(dropna=False))
+    # rot = rot_lt + rot_th + rot_lt_th + rot_tb
     
     # write data
     worksheet.write(
