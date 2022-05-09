@@ -283,6 +283,110 @@ def write_STAT1002_2021_YRD_1_HL_1_LAN1():
         footer='STAT1002-2021-YRD-1'
     )
 
+def write_STAT1002_2021_YRD_1_Y_2021_LAN2():
+    response = rh.read_response(const.PATH_RESPONSE, course_id='STAT1002-2021-YRD-1')
+    attendee = rh.read_attendee(const.PATH_ATTENDEE_Y_2021_LAN2)
+    df = mh.calc(
+        attendee=attendee, response=response,
+        course_id='STAT1002-2021-YRD-1',
+        vt_vp={
+            'vt1': const.VT_Y_2021_LAN1, 'vp1': const.VP_Y_2021_LAN1,
+            'vt2': const.VT_Y_2021_LAN2, 'vp2': const.VP_Y_2021_LAN2,
+        })
+    # df.to_excel('foo.xlsx')
+
+    wh.write_mau_import_diem_STAT1001(
+        df,
+        path=const.PATH_MAU_IMPORT_DIEM_Y_2021_LAN2,
+        mon='Thống kê y học [2 TC]',
+        lop='Y-2021',
+        lop_hp='211TKY_01001203',
+        lan_thi='2'
+    )
+
+    wh.write_bang_diem_STAT1001(
+        df,
+        path=const.PATH_BANG_DIEM_Y_2021_LAN2,
+        mon='Thống kê y học [2 TC]',
+        lop='Y-2021',
+        lop_hp='211TKY_01001203',
+        ngay_thi='07/05/2022',
+        ngay='      ',
+        thang='05',
+        nam='2022',
+        footer='STAT1002-2021-YRD-1',
+        lan_thi='2'
+    )
+
+def write_STAT1002_2021_YRD_1_RHM_2021_LAN2():
+    response = rh.read_response(const.PATH_RESPONSE, course_id='STAT1002-2021-YRD-1')
+    attendee = rh.read_attendee(const.PATH_ATTENDEE_RHM_2021_LAN2)
+    df = mh.calc(
+        attendee=attendee, response=response,
+        course_id='STAT1002-2021-YRD-1',
+        vt_vp={
+            'vt1': const.VT_RHM_2021_LAN1, 'vp1': const.VP_RHM_2021_LAN1,
+            'vt2': const.VT_RHM_2021_LAN2, 'vp2': const.VP_RHM_2021_LAN2,
+        })
+    # df.to_excel('foo.xlsx')
+
+    wh.write_mau_import_diem_STAT1001(
+        df,
+        path=const.PATH_MAU_IMPORT_DIEM_RHM_2021_LAN2,
+        mon='Thống kê y học [2 TC]',
+        lop='RHM-2021',
+        lop_hp='211TKY_01001205',
+        lan_thi='2'
+    )
+
+    wh.write_bang_diem_STAT1001(
+        df,
+        path=const.PATH_BANG_DIEM_RHM_2021_LAN2,
+        mon='Thống kê y học [2 TC]',
+        lop='RHM-2021',
+        lop_hp='211TKY_01001205',
+        ngay_thi='07/05/2022',
+        ngay='      ',
+        thang='05',
+        nam='2022',
+        footer='STAT1002-2021-YRD-1',
+        lan_thi='2'
+    )
+
+def write_STAT1002_2021_YRD_1_HL_1_LAN2():
+    response = rh.read_response(const.PATH_RESPONSE, course_id='STAT1002-2021-YRD-1')
+    attendee = rh.read_attendee(const.PATH_ATTENDEE_HL_1_LAN2)
+    df = mh.calc(
+        attendee=attendee, response=response,
+        course_id='STAT1002-2021-YRD-1',
+        vt_vp={
+            'vt1': const.VT_HL_1_LAN1, 'vp1': const.VP_HL_1_LAN1,
+            'vt2': const.VT_HL_1_LAN2, 'vp2': const.VP_HL_1_LAN2,
+        })
+    # df.to_excel('foo.xlsx')
+
+    wh.write_mau_import_diem_STAT1001(
+        df,
+        path=const.PATH_MAU_IMPORT_DIEM_HL_1_LAN2,
+        mon='Thống kê y học [2 TC]',
+        lop='HL-1',
+        lop_hp='211TKY_01001207',
+        lan_thi='2'
+    )
+
+    wh.write_bang_diem_STAT1001(
+        df,
+        path=const.PATH_BANG_DIEM_HL_1_LAN2,
+        mon='Thống kê y học [2 TC]',
+        lop='HL-1',
+        lop_hp='211TKY_01001207',
+        ngay_thi='07/05/2022',
+        ngay='      ',
+        thang='05',
+        nam='2022',
+        footer='STAT1002-2021-YRD-1',
+        lan_thi='2'
+    )
 
 
 def write_STAT1003_2021_KX_3_KX_2019_LAN1():
@@ -331,10 +435,13 @@ def main():
     # write_STAT1001_2021_KX_2_DD_2018_LAN1()
     # write_STAT1001_2021_KX_2_KX_2021_LAN2()
     # write_STAT1001_2021_KX_2_DD_2018_LAN2()  # 1853010033: TB 4.7, float precision
-    write_STAT1002_2021_YRD_1_Y_2021_LAN1()
-    write_STAT1002_2021_YRD_1_RHM_2021_LAN1()
-    write_STAT1002_2021_YRD_1_DUOC_2021_LAN1()
-    write_STAT1002_2021_YRD_1_HL_1_LAN1()
+    # write_STAT1002_2021_YRD_1_Y_2021_LAN1()
+    # write_STAT1002_2021_YRD_1_RHM_2021_LAN1()
+    # write_STAT1002_2021_YRD_1_DUOC_2021_LAN1()
+    # write_STAT1002_2021_YRD_1_HL_1_LAN1()
+    write_STAT1002_2021_YRD_1_Y_2021_LAN2()
+    write_STAT1002_2021_YRD_1_RHM_2021_LAN2()
+    write_STAT1002_2021_YRD_1_HL_1_LAN2()
     # write_STAT1003_2021_KX_3_KX_2019_LAN1()
     pass
 
