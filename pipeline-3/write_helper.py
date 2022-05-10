@@ -102,7 +102,7 @@ def write_bang_diem_psc_export_INFO1001(df, summary, path, footer='',
 
     worksheet.write(
         'F11',
-        'TX(1)',
+        'GHP',
         header_format)
 
     worksheet.write(

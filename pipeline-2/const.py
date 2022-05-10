@@ -256,3 +256,12 @@ VTLT_HL_1_LAN2 = []
 VPLT_HL_1_LAN2 = []
 VTTH_HL_1_LAN2 = []
 VPTH_HL_1_LAN2 = []
+
+PATH_ATTENDEE_HL_1_LAN2_1 = pathlib.Path('../data/2021/mau-import-diem-import/mau-import-diem-INFO1001-2021-YRD-1-HL-1-LAN2-1.xlsx')
+PATH_MAU_IMPORT_DIEM_HL_1_LAN2_1 = pathlib.Path('../data/2021/mau-import-diem-export/mau-import-diem-INFO1001-2021-YRD-1-HL-1-LAN2-1.xlsx')
+PATH_BANG_DIEM_HL_1_LAN2_1 = pathlib.Path('../data/2021/bang-diem/bang-diem-INFO1001-2021-YRD-1-HL-1-LAN2-1.xlsx')
+
+VTLT_HL_1_LAN2 = []
+VPLT_HL_1_LAN2 = []
+VTTH_HL_1_LAN2 = []
+VPTH_HL_1_LAN2 = []
