@@ -126,3 +126,48 @@ VT_HL_1_LAN2 = [
     '2155010086', '1851010205', '2151010689', '2151010720'
 ]
 VP_HL_1_LAN2 = []
+
+# KT-2020
+PATH_ATTENDEE_KT_2020_LAN1 = pathlib.Path('../data/2021/mau-import-diem-import/mau-import-diem-STAT1001-2021-KT-2-KT-2020-LAN1.xlsx')
+PATH_MAU_IMPORT_DIEM_KT_2020_LAN1 = pathlib.Path('../data/2021/mau-import-diem-export/mau-import-diem-STAT1001-2021-KT-2-KT-2020-LAN1.xlsx')
+PATH_BANG_DIEM_KT_2020_LAN1 = pathlib.Path('../data/2021/bang-diem/bang-diem-STAT1001-2021-KT-2-KT-2020-LAN1.xlsx')
+
+VT_KT_2020_LAN1 = []
+VP_KT_2020_LAN1 = []
+
+PATH_ATTENDEE_KT_2020_LAN2 = pathlib.Path('../data/2021/mau-import-diem-import/mau-import-diem-STAT1001-2021-KT-2-KT-2020-LAN2.xlsx')
+PATH_MAU_IMPORT_DIEM_KT_2020_LAN2 = pathlib.Path('../data/2021/mau-import-diem-export/mau-import-diem-STAT1001-2021-KT-2-KT-2020-LAN2.xlsx')
+PATH_BANG_DIEM_KT_2020_LAN2 = pathlib.Path('../data/2021/bang-diem/bang-diem-STAT1001-2021-KT-2-KT-2020-LAN2.xlsx')
+
+VT_KT_2020_LAN2 = []
+VP_KT_2020_LAN2 = []
+
+# YT-2021
+PATH_ATTENDEE_YT_2021_LAN1 = pathlib.Path('../data/2021/mau-import-diem-import/mau-import-diem-STAT1001-2021-YT-1-YT-2021-LAN1.xlsx')
+PATH_MAU_IMPORT_DIEM_YT_2021_LAN1 = pathlib.Path('../data/2021/mau-import-diem-export/mau-import-diem-STAT1001-2021-YT-1-YT-2021-LAN1.xlsx')
+PATH_BANG_DIEM_YT_2021_LAN1 = pathlib.Path('../data/2021/bang-diem/bang-diem-STAT1001-2021-YT-2-YT-2021-LAN1.xlsx')
+
+VT_YT_2021_LAN1 = []
+VP_YT_2021_LAN1 = []
+
+PATH_ATTENDEE_YT_2021_LAN2 = pathlib.Path('../data/2021/mau-import-diem-import/mau-import-diem-STAT1001-2021-YT-1-YT-2021-LAN2.xlsx')
+PATH_MAU_IMPORT_DIEM_YT_2021_LAN2 = pathlib.Path('../data/2021/mau-import-diem-export/mau-import-diem-STAT1001-2021-YT-1-YT-2021-LAN2.xlsx')
+PATH_BANG_DIEM_YT_2021_LAN2 = pathlib.Path('../data/2021/bang-diem/bang-diem-STAT1001-2021-YT-1-YT-2021-LAN2.xlsx')
+
+VT_YT_2021_LAN2 = []
+VP_YT_2021_LAN2 = []
+
+# YT-2019
+PATH_ATTENDEE_YT_2019_LAN1 = pathlib.Path('../data/2021/mau-import-diem-import/mau-import-diem-STAT1001-2021-YT-1-YT-2019-LAN1.xlsx')
+PATH_MAU_IMPORT_DIEM_YT_2019_LAN1 = pathlib.Path('../data/2021/mau-import-diem-export/mau-import-diem-STAT1001-2021-YT-1-YT-2019-LAN1.xlsx')
+PATH_BANG_DIEM_YT_2019_LAN1 = pathlib.Path('../data/2021/bang-diem/bang-diem-STAT1001-2021-YT-2-YT-2019-LAN1.xlsx')
+
+VT_YT_2019_LAN1 = []
+VP_YT_2019_LAN1 = []
+
+PATH_ATTENDEE_YT_2019_LAN2 = pathlib.Path('../data/2021/mau-import-diem-import/mau-import-diem-STAT1001-2021-YT-1-YT-2019-LAN2.xlsx')
+PATH_MAU_IMPORT_DIEM_YT_2019_LAN2 = pathlib.Path('../data/2021/mau-import-diem-export/mau-import-diem-STAT1001-2021-YT-1-YT-2019-LAN2.xlsx')
+PATH_BANG_DIEM_YT_2019_LAN2 = pathlib.Path('../data/2021/bang-diem/bang-diem-STAT1001-2021-YT-1-YT-2019-LAN2.xlsx')
+
+VT_YT_2019_LAN2 = []
+VP_YT_2019_LAN2 = []
