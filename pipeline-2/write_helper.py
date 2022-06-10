@@ -362,3 +362,5 @@ def write_bang_diem_INFO1001(df, path, footer='',
         workbook.add_format({'align': 'center', 'bold': True}))
     
     workbook.close()
+
+

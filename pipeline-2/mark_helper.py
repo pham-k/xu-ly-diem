@@ -154,6 +154,8 @@ def calc_THILT2_PRINT(row):
     vtlt2, vplt2, thilt1, thilt2 = row[0], row[1], row[2], row[3]
     if pd.notna(thilt2):
         return thilt2
+    elif pd.notna(thilt1) and pd.isna(thilt2) and vtlt2 and not vplt2 and thilt1 < 5:
+        return 'VT'
     elif pd.notna(thilt1) and pd.isna(thilt2):
         return thilt1
     elif pd.isna(thilt1) and pd.isna(thilt2) and vplt2:
@@ -162,6 +164,7 @@ def calc_THILT2_PRINT(row):
         return 'VT'
     elif pd.isna(thilt1) and pd.isna(thilt2) and not vtlt2 and not vplt2:
         return 'VT'
+    
     else:
         return 'PENDING'
 
@@ -246,10 +249,19 @@ def calc_NOTE2(row):
         and tb2 >= 4):
         return ''
     # Vang thi
-    elif (pd.isna(thilt1) and pd.isna(thith1)
-        and pd.isna(thilt2) and pd.isna(thith2)
-        and not vplt2 and not vpth2):
+    # Vang thi
+    elif vtlt2 and vtth2 and not vplt2 and not vpth2:
         return 'VT LT, VT TH'
+    elif vtlt2 and vtth2 and vplt2 and not vpth2:
+        return 'VP LT, VT TH'
+    elif vtlt2 and vtth2 and not vplt2 and vpth2:
+        return 'VT LT, VP TH'
+    elif vtlt2 and vtth2 and vplt2 and vpth2:
+        return 'VP LT, VP TH'
+    # elif (pd.isna(thilt1) and pd.isna(thith1)
+    #     and pd.isna(thilt2) and pd.isna(thith2)
+    #     and not vplt2 and not vpth2):
+    #     return 'VT LT, VT TH'
     # Rot
     elif (pd.notna(thilt2) and thilt2 < 5 and pd.notna(thith2) and thith2 < 5):
         return 'Rớt LT, TH'

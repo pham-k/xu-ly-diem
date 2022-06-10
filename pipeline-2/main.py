@@ -544,7 +544,7 @@ def write_INFO1001_2021_YRD_1_Y_2021_LAN_1():
         lan_thi='1',
         ngay_thi='14/04/2022',
         ngay='      ',
-        thang='05',
+        thang='      ',
         nam='2022',
         footer='INFO1001-2021-YRD-1',
     )
@@ -580,7 +580,7 @@ def write_INFO1001_2021_YRD_1_RHM_2021_LAN_1():
         lan_thi='1',
         ngay_thi='14/04/2022',
         ngay='      ',
-        thang='05',
+        thang='      ',
         nam='2022',
         footer='INFO1001-2021-YRD-1',
     )
@@ -616,7 +616,7 @@ def write_INFO1001_2021_YRD_1_DUOC_2021_LAN_1():
         lan_thi='1',
         ngay_thi='14/04/2022',
         ngay='      ',
-        thang='05',
+        thang='      ',
         nam='2022',
         footer='INFO1001-2021-YRD-1',
     )
@@ -652,7 +652,7 @@ def write_INFO1001_2020_YRD_1_RHM_2020_LAN_2():
         lan_thi='2',
         ngay_thi='14/04/2022',
         ngay='      ',
-        thang='05',
+        thang='      ',
         nam='2022',
         footer='INFO1001-2020-YRD-1',
     )
@@ -688,7 +688,7 @@ def write_INFO1001_2021_YRD_1_HL_1_LAN_1():
         lan_thi='1',
         ngay_thi='14/04/2022',
         ngay='      ',
-        thang='05',
+        thang='      ',
         nam='2022',
         footer='INFO1001-2021-YRD-1',
     )
@@ -724,7 +724,7 @@ def write_INFO1001_2021_YRD_1_HL_1_LAN_2_1():
         lan_thi='2',
         ngay_thi='10/05/2022',
         ngay='      ',
-        thang='05',
+        thang='      ',
         nam='2022',
         footer='INFO1001-2021-YRD-1',
     )
@@ -758,12 +758,194 @@ def write_INFO1001_2021_YVD_1_YVD_2021_LAN_1():
         lop='YVD-2021',
         lop_hp='',
         lan_thi='1',
-        ngay_thi='14/04/2022',
+        ngay_thi='06/06/2022',
         ngay='      ',
-        thang='06',
+        thang='      ',
         nam='2022',
         footer='INFO1001-2021-YVD-1',
     )
+
+# def write_INFO1001_2021_YVD_1_YVD_2021_LAN_2():
+#     response = rh.read_response(const.PATH_RESPONSE, course_id='INFO1001-2021-YVD-1')
+#     attendee = rh.read_attendee(const.PATH_ATTENDEE_YVD_2021_LAN2)
+#     df = mh.calc(
+#         attendee=attendee, response=response,
+#         course_id='INFO1001-2021-YVD-1',
+#         vt_vp = {
+#             'vtlt1': const.VTLT_YVD_2021_LAN1, 'vplt1': const.VPLT_YVD_2021_LAN1, 
+#             'vtth1': const.VTTH_YVD_2021_LAN1, 'vpth1': const.VPTH_YVD_2021_LAN1,
+#             'vtlt2': const.VTLT_YVD_2021_LAN2, 'vplt2': const.VPLT_YVD_2021_LAN2, 
+#             'vtth2': const.VTTH_YVD_2021_LAN2, 'vpth2': const.VPTH_YVD_2021_LAN2,
+#         })
+#     # df.to_excel('foo.xlsx')
+#     wh.write_mau_import_diem_INFO1001(
+#         df,
+#         path=const.PATH_MAU_IMPORT_DIEM_YVD_2021_LAN2,
+#         mon='Tin học [2 TC]',
+#         lop='YVD-2021',
+#         lop_hp='',
+#         lan_thi='1'
+#     )
+
+#     wh.write_bang_diem_INFO1001(
+#         df,
+#         path=const.PATH_BANG_DIEM_YVD_2021_LAN1,
+#         mon='Tin học [2 TC]',
+#         lop='YVD-2021',
+#         lop_hp='',
+#         lan_thi='1',
+#         ngay_thi='14/04/2022',
+#         ngay='      ',
+#         thang='      ',
+#         nam='2022',
+#         footer='INFO1001-2021-YVD-1',
+#     )
+
+
+def write_INFO1001_2021_YRD_1_Y_2021_LAN_2():
+    response = rh.read_response(const.PATH_RESPONSE, course_id='INFO1001-2021-YRD-1')
+    attendee = rh.read_attendee(const.PATH_ATTENDEE_Y_2021_LAN2)
+    df = mh.calc(
+        attendee=attendee, response=response,
+        course_id='INFO1001-2021-YRD-1',
+        vt_vp = {
+            'vtlt1': const.VTLT_Y_2021_LAN1, 'vplt1': const.VPLT_Y_2021_LAN1, 
+            'vtth1': const.VTTH_Y_2021_LAN1, 'vpth1': const.VPTH_Y_2021_LAN1,
+            'vtlt2': const.VTLT_Y_2021_LAN2, 'vplt2': const.VPLT_Y_2021_LAN2, 
+            'vtth2': const.VTTH_Y_2021_LAN2, 'vpth2': const.VPTH_Y_2021_LAN2,
+        })
+    # df.to_excel('foo.xlsx')
+    wh.write_mau_import_diem_INFO1001(
+        df,
+        path=const.PATH_MAU_IMPORT_DIEM_Y_2021_LAN2,
+        mon='Tin học [2 TC]',
+        lop='Y-2021',
+        lop_hp='211TTO_01000603',
+        lan_thi='2'
+    )
+
+    wh.write_bang_diem_INFO1001(
+        df,
+        path=const.PATH_BANG_DIEM_Y_2021_LAN2,
+        mon='Tin học [2 TC]',
+        lop='Y-2021',
+        lop_hp='211TTO_01000603',
+        lan_thi='2',
+        ngay_thi='26/05/2022',
+        ngay='      ',
+        thang='      ',
+        nam='2022',
+        footer='INFO1001-2021-YRD-1',
+    )
+    
+def write_INFO1001_2021_YRD_1_RHM_2021_LAN_2():
+    response = rh.read_response(const.PATH_RESPONSE, course_id='INFO1001-2021-YRD-1')
+    attendee = rh.read_attendee(const.PATH_ATTENDEE_RHM_2021_LAN2)
+    df = mh.calc(
+        attendee=attendee, response=response,
+        course_id='INFO1001-2021-YRD-1',
+        vt_vp = {
+            'vtlt1': const.VTLT_RHM_2021_LAN1, 'vplt1': const.VPLT_RHM_2021_LAN1, 
+            'vtth1': const.VTTH_RHM_2021_LAN1, 'vpth1': const.VPTH_RHM_2021_LAN1,
+            'vtlt2': const.VTLT_RHM_2021_LAN2, 'vplt2': const.VPLT_RHM_2021_LAN2, 
+            'vtth2': const.VTTH_RHM_2021_LAN2, 'vpth2': const.VPTH_RHM_2021_LAN2,
+        })
+    # df.to_excel('foo.xlsx')
+    wh.write_mau_import_diem_INFO1001(
+        df,
+        path=const.PATH_MAU_IMPORT_DIEM_RHM_2021_LAN2,
+        mon='Tin học [2 TC]',
+        lop='RHM-2021',
+        lop_hp='211TTO_01000605',
+        lan_thi='2'
+    )
+
+    wh.write_bang_diem_INFO1001(
+        df,
+        path=const.PATH_BANG_DIEM_RHM_2021_LAN2,
+        mon='Tin học [2 TC]',
+        lop='RHM-2021',
+        lop_hp='211TTO_01000605',
+        lan_thi='2',
+        ngay_thi='26/05/2022',
+        ngay='      ',
+        thang='      ',
+        nam='2022',
+        footer='INFO1001-2021-YRD-1',
+    )
+
+def write_INFO1001_2021_YRD_1_DUOC_2021_LAN_2():
+    response = rh.read_response(const.PATH_RESPONSE, course_id='INFO1001-2021-YRD-1')
+    attendee = rh.read_attendee(const.PATH_ATTENDEE_DUOC_2021_LAN2)
+    df = mh.calc(
+        attendee=attendee, response=response,
+        course_id='INFO1001-2021-YRD-1',
+        vt_vp = {
+            'vtlt1': const.VTLT_DUOC_2021_LAN1, 'vplt1': const.VPLT_DUOC_2021_LAN1, 
+            'vtth1': const.VTTH_DUOC_2021_LAN1, 'vpth1': const.VPTH_DUOC_2021_LAN1,
+            'vtlt2': const.VTLT_DUOC_2021_LAN2, 'vplt2': const.VPLT_DUOC_2021_LAN2, 
+            'vtth2': const.VTTH_DUOC_2021_LAN2, 'vpth2': const.VPTH_DUOC_2021_LAN2,
+        })
+    # df.to_excel('foo.xlsx')
+    wh.write_mau_import_diem_INFO1001(
+        df,
+        path=const.PATH_MAU_IMPORT_DIEM_DUOC_2021_LAN2,
+        mon='Tin học [2 TC]',
+        lop='DUOC-2021',
+        lop_hp='211TTO_01000601',
+        lan_thi='2'
+    )
+
+    wh.write_bang_diem_INFO1001(
+        df,
+        path=const.PATH_BANG_DIEM_DUOC_2021_LAN2,
+        mon='Tin học [2 TC]',
+        lop='DUOC-2021',
+        lop_hp='211TTO_01000601',
+        lan_thi='2',
+        ngay_thi='26/05/2022',
+        ngay='      ',
+        thang='      ',
+        nam='2022',
+        footer='INFO1001-2021-YRD-1',
+    )
+
+def write_INFO1001_2021_YRD_1_HL_1_LAN_2():
+    response = rh.read_response(const.PATH_RESPONSE, course_id='INFO1001-2021-YRD-1')
+    attendee = rh.read_attendee(const.PATH_ATTENDEE_HL_1_LAN2)
+    df = mh.calc(
+        attendee=attendee, response=response,
+        course_id='INFO1001-2021-YRD-1',
+        vt_vp = {
+            'vtlt1': const.VTLT_HL_1_LAN1, 'vplt1': const.VPLT_HL_1_LAN1, 
+            'vtth1': const.VTTH_HL_1_LAN1, 'vpth1': const.VPTH_HL_1_LAN1,
+            'vtlt2': const.VTLT_HL_1_LAN2, 'vplt2': const.VPLT_HL_1_LAN2, 
+            'vtth2': const.VTTH_HL_1_LAN2, 'vpth2': const.VPTH_HL_1_LAN2,
+        })
+    
+    wh.write_mau_import_diem_INFO1001(
+        df,
+        path=const.PATH_MAU_IMPORT_DIEM_HL_1_LAN2,
+        mon='Tin học [2 TC]',
+        lop='HL-1',
+        lop_hp='211TTO_01000607',
+        lan_thi='2'
+    )
+
+    wh.write_bang_diem_INFO1001(
+        df,
+        path=const.PATH_BANG_DIEM_HL_1_LAN2,
+        mon='Tin học [2 TC]',
+        lop='HL-1',
+        lop_hp='211TTO_01000607',
+        lan_thi='2',
+        ngay_thi='26/05/2022',
+        ngay='      ',
+        thang='      ',
+        nam='2022',
+        footer='INFO1001-2021-YRD-1',
+    )
+    
 
 
 
@@ -790,6 +972,10 @@ def main():
     # write_INFO1001_2021_YRD_1_HL_1_LAN_1()
     # write_INFO1001_2021_YRD_1_HL_1_LAN_2_1()
     write_INFO1001_2021_YVD_1_YVD_2021_LAN_1()
+    write_INFO1001_2021_YRD_1_Y_2021_LAN_2()
+    write_INFO1001_2021_YRD_1_RHM_2021_LAN_2()
+    write_INFO1001_2021_YRD_1_DUOC_2021_LAN_2()
+    write_INFO1001_2021_YRD_1_HL_1_LAN_2()
     pass
 
 if __name__ == '__main__':
