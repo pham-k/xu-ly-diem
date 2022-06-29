@@ -709,6 +709,74 @@ def write_STAT1002_2021_DHD_1_DHD_2021_LAN1():
         lan_thi='1',
     )
 
+def write_STAT1002_2021_XN_1_XN_2021_LAN1():
+    response = rh.read_response(const.PATH_RESPONSE, course_id='STAT1002-2021-XN-1')
+    attendee = rh.read_attendee(const.PATH_ATTENDEE_XN_2021_LAN1)
+    df = mh.calc(
+        attendee=attendee, response=response,
+        course_id='STAT1002-2021-XN-1',
+        vt_vp={
+            'vt1': const.VT_XN_2021_LAN1, 'vp1': const.VP_XN_2021_LAN1,
+            'vt2': const.VT_XN_2021_LAN2, 'vp2': const.VP_XN_2021_LAN2,
+        })
+
+    wh.write_mau_import_diem_STAT1001(
+        df,
+        path=const.PATH_MAU_IMPORT_DIEM_XN_2021_LAN1,
+        mon='Xác suất - Thống kê y học [2 TC]',
+        lop='XN-2021',
+        lop_hp='212XTK01061001',
+        lan_thi='1',
+    )
+
+    wh.write_bang_diem_STAT1001(
+        df,
+        path=const.PATH_BANG_DIEM_XN_2021_LAN1,
+        mon='Xác suất - Thống kê y học [2 TC]',
+        lop='XN-2021',
+        lop_hp='212XTK01061001',
+        ngay_thi='26/07/2022',
+        ngay='      ',
+        thang='',
+        nam='2022',
+        footer='STAT1002-2021-XN-1',
+        lan_thi='1',
+    )
+
+def write_STAT1003_2021_KT_2_KT_2020_LAN1():
+    response = rh.read_response(const.PATH_RESPONSE, course_id='STAT1003-2021-KT-2')
+    attendee = rh.read_attendee(const.PATH_ATTENDEE_KT_2020_LAN1)
+    df = mh.calc(
+        attendee=attendee, response=response,
+        course_id='STAT1003-2021-KT-2',
+        vt_vp={
+            'vt1': const.VT_KT_2020_LAN1, 'vp1': const.VP_KT_2020_LAN1,
+            'vt2': const.VT_KT_2020_LAN2, 'vp2': const.VP_KT_2020_LAN2,
+        })
+
+    wh.write_mau_import_diem_STAT1001(
+        df,
+        path=const.PATH_MAU_IMPORT_DIEM_KT_2020_LAN1,
+        mon='Tin học nâng cao [2 TC]',
+        lop='KT-2020',
+        lop_hp='212THN01990103',
+        lan_thi='1',
+    )
+
+    wh.write_bang_diem_STAT1001(
+        df,
+        path=const.PATH_BANG_DIEM_KT_2020_LAN1,
+        mon='Tin học nâng cao [2 TC]',
+        lop='KT-2020',
+        lop_hp='212THN01990103',
+        ngay_thi='14/07/2022',
+        ngay='      ',
+        thang='',
+        nam='2022',
+        footer='STAT1002-2021-KT-1',
+        lan_thi='1',
+    )
+
 
 
 def main():
@@ -724,13 +792,15 @@ def main():
     # write_STAT1002_2021_YRD_1_RHM_2021_LAN2()
     # write_STAT1002_2021_YRD_1_HL_1_LAN2()
     # write_STAT1003_2021_KX_3_KX_2019_LAN1()
-    write_STAT1001_2021_KT_2_KT_2020_LAN1()
-    write_STAT1001_2021_KT_2_KT_2020_LAN2()
-    write_STAT1001_2021_YT_1_YT_2021_LAN1()
-    write_STAT1001_2021_YT_1_YT_2021_LAN2()
-    write_STAT1001_2021_YT_1_YT_2019_LAN1()
+    # write_STAT1001_2021_KT_2_KT_2020_LAN1()
+    # write_STAT1001_2021_KT_2_KT_2020_LAN2()
+    # write_STAT1001_2021_YT_1_YT_2021_LAN1()
+    # write_STAT1001_2021_YT_1_YT_2021_LAN2()
+    # write_STAT1001_2021_YT_1_YT_2019_LAN1()
     # write_STAT1002_2021_DD_1_DD_2021_LAN1()
     # write_STAT1002_2021_DHD_1_DHD_2021_LAN1()
+    write_STAT1002_2021_XN_1_XN_2021_LAN1()
+    write_STAT1003_2021_KT_2_KT_2020_LAN1()
     pass
 
 if __name__ == '__main__':
