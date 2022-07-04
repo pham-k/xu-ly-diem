@@ -312,7 +312,7 @@ PATH_ATTENDEE_YVD_2021_LAN2 = pathlib.Path('../data/2021/mau-import-diem-import/
 PATH_MAU_IMPORT_DIEM_YVD_2021_LAN2 = pathlib.Path('../data/2021/mau-import-diem-export/mau-import-diem-INFO1001-2021-YVD-1-YVD-2021-LAN2.xlsx')
 PATH_BANG_DIEM_YVD_2021_LAN2 = pathlib.Path('../data/2021/bang-diem/bang-diem-INFO1001-2021-YVD-1-YVD-2021-LAN2.xlsx')
 
-VTLT_YVD_2021_LAN2 = []
+VTLT_YVD_2021_LAN2 = ['2151010637']
 VPLT_YVD_2021_LAN2 = []
-VTTH_YVD_2021_LAN2 = []
+VTTH_YVD_2021_LAN2 = ['2151010637', '2151010307']
 VPTH_YVD_2021_LAN2 = []

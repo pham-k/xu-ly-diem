@@ -258,6 +258,8 @@ def calc_NOTE2(row):
         return 'VT LT, VP TH'
     elif vtlt2 and vtth2 and vplt2 and vpth2:
         return 'VP LT, VP TH'
+    elif not vtlt2 and vtth2 and not vplt2 and not vpth2:
+        return 'VT TH'
     # elif (pd.isna(thilt1) and pd.isna(thith1)
     #     and pd.isna(thilt2) and pd.isna(thith2)
     #     and not vplt2 and not vpth2):
