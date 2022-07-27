@@ -663,7 +663,7 @@ def write_STAT1002_2021_DD_1_DD_2021_LAN1():
         lop_hp='212TKY01991001',
         ngay_thi='26/07/2022',
         ngay='      ',
-        thang='',
+        thang='      ',
         nam='2022',
         footer='STAT1002-2021-DD-1',
         lan_thi='1',
@@ -703,7 +703,7 @@ def write_STAT1002_2021_DHD_1_DHD_2021_LAN1():
         lop_hp='212XST01991401',
         ngay_thi='26/07/2022',
         ngay='      ',
-        thang='',
+        thang='      ',
         nam='2022',
         footer='STAT1002-2021-DHD-1',
         lan_thi='1',
@@ -737,7 +737,7 @@ def write_STAT1002_2021_XN_1_XN_2021_LAN1():
         lop_hp='212XTK01061001',
         ngay_thi='26/07/2022',
         ngay='      ',
-        thang='',
+        thang='      ',
         nam='2022',
         footer='STAT1002-2021-XN-1',
         lan_thi='1',
@@ -771,7 +771,7 @@ def write_STAT1003_2021_KT_2_KT_2020_LAN1():
         lop_hp='212THN01990103',
         ngay_thi='14/07/2022',
         ngay='      ',
-        thang='',
+        thang='      ',
         nam='2022',
         footer='STAT1002-2021-KT-1',
         lan_thi='1',
@@ -797,10 +797,10 @@ def main():
     # write_STAT1001_2021_YT_1_YT_2021_LAN1()
     # write_STAT1001_2021_YT_1_YT_2021_LAN2()
     # write_STAT1001_2021_YT_1_YT_2019_LAN1()
-    # write_STAT1002_2021_DD_1_DD_2021_LAN1()
-    # write_STAT1002_2021_DHD_1_DHD_2021_LAN1()
+    write_STAT1002_2021_DD_1_DD_2021_LAN1()
+    write_STAT1002_2021_DHD_1_DHD_2021_LAN1()
     write_STAT1002_2021_XN_1_XN_2021_LAN1()
-    write_STAT1003_2021_KT_2_KT_2020_LAN1()
+    # write_STAT1003_2021_KT_2_KT_2020_LAN1()
     pass
 
 if __name__ == '__main__':
