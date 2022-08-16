@@ -192,7 +192,8 @@ PATH_ATTENDEE_DD_2021_LAN2 = pathlib.Path('../data/2021/mau-import-diem-import/m
 PATH_MAU_IMPORT_DIEM_DD_2021_LAN2 = pathlib.Path('../data/2021/mau-import-diem-export/mau-import-diem-STAT1002-2021-DD-1-DD-2021-LAN2.xlsx')
 PATH_BANG_DIEM_DD_2021_LAN2 = pathlib.Path('../data/2021/bang-diem/bang-diem-STAT1002-2021-DD-1-DD-2021-LAN2.xlsx')
 
-VT_DD_2021_LAN2 = []
+VT_DD_2021_LAN2 = [
+    '2053010150', '2153010004', '2153010037', '2153010074', '2153010076', '2153010116', '2153010178']
 VP_DD_2021_LAN2 = []
 
 # DHD-2021
@@ -207,7 +208,7 @@ PATH_ATTENDEE_DHD_2021_LAN2 = pathlib.Path('../data/2021/mau-import-diem-import/
 PATH_MAU_IMPORT_DIEM_DHD_2021_LAN2 = pathlib.Path('../data/2021/mau-import-diem-export/mau-import-diem-STAT1002-2021-DHD-1-DHD-2021-LAN2.xlsx')
 PATH_BANG_DIEM_DHD_2021_LAN2 = pathlib.Path('../data/2021/bang-diem/bang-diem-STAT1002-2021-DHD-1-DHD-2021-LAN2.xlsx')
 
-VT_DHD_2021_LAN2 = []
+VT_DHD_2021_LAN2 = ['2154010075', '2154010040', '2154010076', '2054010012']
 VP_DHD_2021_LAN2 = []
 
 # XN-2021
@@ -222,7 +223,7 @@ PATH_ATTENDEE_XN_2021_LAN2 = pathlib.Path('../data/2021/mau-import-diem-import/m
 PATH_MAU_IMPORT_DIEM_XN_2021_LAN2 = pathlib.Path('../data/2021/mau-import-diem-export/mau-import-diem-STAT1002-2021-XN-1-XN-2021-LAN2.xlsx')
 PATH_BANG_DIEM_XN_2021_LAN2 = pathlib.Path('../data/2021/bang-diem/bang-diem-STAT1002-2021-XN-1-XN-2021-LAN2.xlsx')
 
-VT_XN_2021_LAN2 = []
+VT_XN_2021_LAN2 = ['2156010038', '2156010039', '2156010048', '2156010061']
 VP_XN_2021_LAN2 = []
 
 # KT-2020
